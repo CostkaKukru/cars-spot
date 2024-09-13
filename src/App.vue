@@ -6,24 +6,39 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import image1 from './assets/gallery/image 1.png';
+import image2 from './assets/gallery/image 2.png';
+import image3 from './assets/gallery/image 3.png'
 
-const slides = ([
+const slides = [
   {
     title: 'El Teide Volcano, Spain',
     content: 'Photo by Max Rive',
-    image: require('./assets/gallery/image 1.png'),
+    image: image1,
   },
   {
     title: 'Slide 2',
     content: 'Content for Slide 2',
-    image: require('./assets/gallery/image2.png'),
+    image: image2,
   },
   {
     title: 'Slide 3',
     content: 'Content for Slide 3',
-    image: require('./assets/gallery/image3.png'),
+    image: image3,
   },
-]);
+  {
+    title: 'Slide 4',
+    content: 'Content for Slide 5',
+    image: image1,
+  },
+  {
+    title: 'Slide 5',
+    content: 'Content for Slide 5',
+    image: image2,
+  },
+];
+
+
 
 </script>
 
@@ -75,7 +90,20 @@ const slides = ([
     </div>
 </section>
 
-        
+<section class="bg-white dark:bg-gray-900">
+  <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+      <div class="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
+            <h5 class="mb-2 font-medium uppercase">Prezentacja firmy</h5>
+          <h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">Zobacz naszą galerię zdjęć</h2>
+          <a href="#" class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-700">
+              Samochody osobowe
+              <svg class="ml-1 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+          </a>
+      </div>
+  </div>
+</section>
+
+
     <main class = "container">
         
         <vueper-slides
@@ -87,46 +115,47 @@ const slides = ([
             :arrows-outside="false">
                 <vueper-slide 
                 v-for="(slide, i) in slides" 
-                :key="i" 
+                :key="i"
                 :image = "slide.image"  />
         </vueper-slides>
     </main>
 
-    <main class="container">
-    <vueper-slides
-      class="no-shadow"
-      :visible-slides="2"
-      slide-multiple
-      :slide-ratio="1 / 4"
-      :gap="5"
-      :arrows-outside="false"
-    >
-      <vueper-slide
-        v-for="(photo, index) in photos"
-        :key="index"
-      >
-        <!-- Display each image -->
-        <img :src="`./assets/${photo}`" :alt="`Photo ${index + 1}`" class="w-full h-auto object-cover" />
-      </vueper-slide>
-    </vueper-slides>
+    <!--Footer container-->
+    <footer
+        class="flex flex-col items-center bg-zinc-50 text-center text-surface dark:bg-neutral-700 dark:text-white lg:text-left">
+        <div class="container p-6">
+            <div class="grid gap-4 lg:grid-cols-2">
+                <div class="mb-6 md:mb-0">
+                <h5 class="mb-2 font-medium uppercase">Footer text</h5>
 
-        <swiper
-            :slidesPerView="'auto'"
-            :spaceBetween="30"
-            :pagination="{
-            clickable: true,
-            }"
-            :modules="modules"
-            class="mySwiper"
-        >
-            <swiper-slide>Slide 1</swiper-slide>
-            <swiper-slide>Slide 2</swiper-slide><swiper-slide>Slide 3</swiper-slide>
-            <swiper-slide>Slide 4</swiper-slide><swiper-slide>Slide 5</swiper-slide>
-            <swiper-slide>Slide 6</swiper-slide><swiper-slide>Slide 7</swiper-slide>
-            <swiper-slide>Slide 8</swiper-slide><swiper-slide>Slide 9</swiper-slide>
-        </swiper>
+                <p class="mb-4">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste
+          atque ea quis molestias. Fugiat pariatur maxime quis culpa
+          corporis vitae repudiandae aliquam voluptatem veniam, est atque
+          cumque eum delectus sint!
+        </p>
+      </div>
 
-    </main>
+      <div class="mb-6 md:mb-0">
+        <h5 class="mb-2 font-medium uppercase">Footer text</h5>
+
+        <p class="mb-4">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste
+          atque ea quis molestias. Fugiat pariatur maxime quis culpa
+          corporis vitae repudiandae aliquam voluptatem veniam, est atque
+          cumque eum delectus sint!
+        </p>
+        <button class="text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-700">Expand</button>
+      </div>
+    </div>
+  </div>
+
+  <!--Copyright section-->
+  <div class="w-full bg-black/5 p-4 text-center">
+    © 2023 Copyright:
+    <a href="https://tw-elements.com/">TW Elements</a>
+  </div>
+    </footer>
 
 </template>
 

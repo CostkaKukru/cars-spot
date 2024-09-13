@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "swiper": "^11.1.12",
-    "vue": "^3.4.37"
+    "vue": "^3.4.37",
+    "vueperslides": "^3.5.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.2",
