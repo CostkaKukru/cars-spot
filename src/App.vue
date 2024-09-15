@@ -1,5 +1,8 @@
 <script setup>
 
+import Accordion from './components/Accordion.vue';
+import FooterText from './components/FooterText.vue';
+
 import { VueperSlides, VueperSlide } from 'vueperslides';
 import 'vueperslides/dist/vueperslides.css';
 
@@ -57,7 +60,7 @@ const slides = [
           <img src="./assets/Group 255.png" class="mr-3" alt="CarsSpot Logo" />
         </a>
           <div class="flex items-center lg:order-2">
-            <a href="#" class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">Zadzwoń do nas</a>
+            <a href="#" class="text-white bg-carsblue hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none">Zadzwoń do nas</a>
           </div>
             <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
                 <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
@@ -73,37 +76,31 @@ const slides = [
     </nav>
   </header>
 
-  <section>
-    <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+  <section class="hero-section">
+    <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-32 lg:grid-cols-12">
         <div class="mr-auto place-self-center lg:col-span-6">
-            <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl">Sprzedajemy samochody<br>z Europy</h1>
+            <h1 class="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl">Sprzedajemy samochody<br>z Europy</h1>
             <p class="max-w-2xl mb-6 font-light text-neutral-800 lg:mb-8 md:text-lg lg:text-xl">Kup komfortowy pojazd, aby każda podróż<br> była wyjątkowym przeżyciem.</p>
-            <a href="#" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300">
+            <a href="#" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-carsblue hover:bg-primary-800 focus:ring-4 focus:ring-primary-300">
                 Zobacz zdjęcia
-                <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </a>
-            <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+            <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-carsblue border border-carsblue rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
                 Zadzwoń do nas
             </a> 
         </div>
-        <div class="lg:mt-0 lg:col-span-6 lg:flex lg:items-end">
-            <img src="./assets/Hero.png" alt="Auta" class="offset-bottom">
-        </div>                
     </div>
-</section>
+  </section>
 
 <section>
   <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
       <div class="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
             <h3 class="mb-3">Prezentacja firmy</h3>
           <h2 class="mb-7 tracking-tight text-gray-900 dark:text-white">Zobacz naszą galerię zdjęć</h2>
-          <a href="#" class="inline-flex items-center hover:font-medium text-primary-600 hover:text-primary-800">
+          <a href="#" class="inline-flex items-center mr-10 text-gray-900 hover:underline-offset hover:font-medium hover:text-carsblue">
               Samochody osobowe
-              <svg class="ml-1 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
           </a>
-          <a href="#" class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800">
+          <a href="#" class="inline-flex items-center text-gray-900 hover:underline-offset hover:font-medium hover:text-carsblue">
               Samochody dostawcze
-              <svg class="ml-1 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>  
           </a>
       </div>
   </div>
@@ -133,13 +130,18 @@ const slides = [
                 <div class="mb-6 md:mb-0">
                 <h5 class="mb-2">Id nostrud enim esse consectetur in eu mollit fugiat aute. Velit nulla commodo.</h5>
 
-                <p class="mb-4 font">
+                <p class="mb-4 font:">
                   Mauris varius ipsum mauris, 
                   rutrum lobortis magna efficitur a. 
                   Donec egestas, nisl vehicula feugiat 
                   ornare, diam turpis efficitur mi, ac 
                   venenatis eros ipsum ac arcu. Vestibulum et  [...]
-        </p>
+                </p>
+              <Accordion
+              aria-title="more"
+              title="Rozwiń">
+              <FooterText></FooterText>
+              </Accordion>
       </div>
 
       <div class="mb-6 md:mb-0">
@@ -151,7 +153,7 @@ const slides = [
           corporis vitae repudiandae aliquam voluptatem veniam, est atque
           cumque eum delectus sint!
         </p>
-        <button class="text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-700">Expand</button>
+        <button class="text-white hover:text-gray-100">Rozwiń</button>
       </div>
     </div>
   </div>
@@ -168,7 +170,7 @@ const slides = [
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@400;500;700&family=Roboto+Flex:wght@400;500;700&display=swap');
 
-body{
+body {
   font-family: 'Roboto Condensed';
   font-weight: 400;
   font-size: 16px;
@@ -197,6 +199,17 @@ h5 {
 
 button, a {
   font-family: 'Roboto Flex';
+  font-size: 15px;
+}
+p {
+  font-family: 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.hover\:underline-offset:hover {
+  text-decoration: underline;
+  text-underline-offset: 6px;
 }
 
 .original-size {
@@ -207,6 +220,14 @@ button, a {
 .offset-bottom {
     position: relative;
     top: 100px; 
+}
+
+.hero-section {
+    background-image: url('./assets/Hero.png');
+    background-size: auto;
+    background-position: right 300px;
+    background-repeat: no-repeat;
+    padding-bottom: 200px;
 }
 
 </style>

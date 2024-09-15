@@ -4,7 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
-  darkMode: 'class', // Dodanie wsparcia dla trybu ciemnego
+  darkMode: 'class', 
   theme: {
     extend: {
       colors: {
@@ -20,7 +20,9 @@ export default {
           "800": "#1e40af",
           "900": "#1e3a8a",
           "950": "#172554"
-        }
+        },
+        "carsblue": '#0147FF',
+        "carsgray": '#F7F7F7',
       },
       fontFamily: {
         'body': [
@@ -57,6 +59,11 @@ export default {
           'Segoe UI Symbol', 
           'Noto Color Emoji'
         ]
+      },
+
+      backgroundImage: {
+        'hero-pattern': "url('/img/hero-pattern.svg')",
+        'footer-texture': "url('/img/footer-texture.png')",
       }
     }
   },
