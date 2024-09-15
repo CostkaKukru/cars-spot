@@ -97,9 +97,9 @@ const slides = [
   </section>
 
   <section>
-    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-      <div class="max-w-screen-lg text-gray-500 sm:text-lg">
-        <h3 class="mb-3">Prezentacja firmy</h3>
+    <div class="px-4 mx-auto max-w-screen-xl lg:py-20 lg:px-6">
+      <div class="max-w-screen-lg text-gray-500">
+        <h3 class="leading-3">Prezentacja firmy</h3>
         <h2 class="mb-7 tracking-tight text-gray-900">Zobacz naszą galerię zdjęć</h2>
         <div class="flex flex-row">
           <a href="#" class="inline-flex items-center mr-10 text-gray-900 hover:underline-offset hover:font-medium hover:text-carsblue">
