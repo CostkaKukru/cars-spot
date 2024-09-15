@@ -44,3 +44,8 @@ p {
   font-weight: 400;
   font-size: 14px;
 }
+
+hr {
+  border: 0.5px solid #E5E5E5;
+  margin: 10px 0;
+}
