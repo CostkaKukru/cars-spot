@@ -54,7 +54,7 @@ const slides = [
 
 <template>
   <header>
-    <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+    <nav class="bg-carsgray border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
       <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
         <a href="https://carsspot.com" class="flex items-center">
           <img src="./assets/Group 255.png" class="mr-3" alt="CarsSpot Logo" />
@@ -76,7 +76,7 @@ const slides = [
     </nav>
   </header>
 
-  <section class="hero-section">
+  <section class="hero-section bg-carsgray">
     <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-32 lg:grid-cols-12">
         <div class="mr-auto place-self-center lg:col-span-6">
             <h1 class="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl">Sprzedajemy samochody<br>z Europy</h1>
@@ -96,17 +96,19 @@ const slides = [
       <div class="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
             <h3 class="mb-3">Prezentacja firmy</h3>
           <h2 class="mb-7 tracking-tight text-gray-900 dark:text-white">Zobacz naszą galerię zdjęć</h2>
+          <div class="flex flex-row">
           <a href="#" class="inline-flex items-center mr-10 text-gray-900 hover:underline-offset hover:font-medium hover:text-carsblue">
               Samochody osobowe
           </a>
           <a href="#" class="inline-flex items-center text-gray-900 hover:underline-offset hover:font-medium hover:text-carsblue">
               Samochody dostawcze
           </a>
+          </div>
       </div>
   </div>
 </section>
 
-    <main class = "container mx-auto max-w-screen-xl">
+    <div class = "container mx-auto max-w-screen-xl">
         
         <vueper-slides
             class="no-shadow"
@@ -120,17 +122,15 @@ const slides = [
                 :key="i"
                 :image = "slide.image"  />
         </vueper-slides>
-    </main>
+      </div>
 
-    <!--Footer container-->
-    <footer
-        class="flex flex-col items-center bg-neutral-800 text-white text-center text-surface lg:text-left">
-        <div class="container p-6 mx-auto max-w-screen-xl">
-            <div class="grid gap-4 lg:grid-cols-2">
-                <div class="mb-6 md:mb-0">
+    <footer class="flex flex-col bg-neutral-800 text-white text-center text-surface lg:text-left">
+        <div class="container px-10 py-32 mx-auto max-w-screen-xl">
+            <div class="grid gap-12 lg:grid-cols-2">
+              <div class="mb-6">
                 <h5 class="mb-2">Id nostrud enim esse consectetur in eu mollit fugiat aute. Velit nulla commodo.</h5>
 
-                <p class="mb-4 font:">
+                <p class="mb-4">
                   Mauris varius ipsum mauris, 
                   rutrum lobortis magna efficitur a. 
                   Donec egestas, nisl vehicula feugiat 
@@ -140,72 +140,54 @@ const slides = [
               <Accordion
               aria-title="more"
               title="Rozwiń">
+
               <FooterText></FooterText>
               </Accordion>
       </div>
 
       <div class="mb-6 md:mb-0">
-        <h5 class="mb-2 font-medium uppercase">Footer text</h5>
+        <h5 class="mb-2">Id nostrud enim esse consectetur in eu mollit fugiat aute. Velit nulla commodo.</h5>
 
-        <p class="mb-4">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste
-          atque ea quis molestias. Fugiat pariatur maxime quis culpa
-          corporis vitae repudiandae aliquam voluptatem veniam, est atque
-          cumque eum delectus sint!
-        </p>
-        <button class="text-white hover:text-gray-100">Rozwiń</button>
+<p class="mb-4">
+  Mauris varius ipsum mauris, 
+  rutrum lobortis magna efficitur a. 
+  Donec egestas, nisl vehicula feugiat 
+  ornare, diam turpis efficitur mi, ac 
+  venenatis eros ipsum ac arcu. Vestibulum et  [...]
+</p>
+<Accordion
+aria-title="more"
+title="Rozwiń">
+
+<FooterText></FooterText>
+</Accordion>
       </div>
     </div>
   </div>
 
   <!--Copyright section-->
-  <div class="w-full bg-black/5 p-4 text-center">
-    © 2023 Copyright:
-    <a href="https://tw-elements.com/">TW Elements</a>
-  </div>
-    </footer>
+  <nav class="px-40 py-2.5 dark:bg-gray-800">
+      <div class="flex flex-wrap text-white justify-between items-center mx-auto max-w-screen-xl">
+        <a href="https://carsspot.com" class="copyright-section font-bold flex items-center">
+          CarsSpot
+        </a>
+          <div class="flex items-center lg:order-2">
+            <a href="#" class="copyright-section text-white focus:ring-4 underline rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none">Polityka prywatności</a>
+          </div>
+        </div>
+    </nav>
+  </footer>
 
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@400;500;700&family=Roboto+Flex:wght@400;500;700&display=swap');
 
-body {
-  font-family: 'Roboto Condensed';
-  font-weight: 400;
-  font-size: 16px;
-}
-
-h1 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 76.29px;
+.copyright-section {
+    font-family: 'Roboto condensed', sans-serif;
+    display: flex;
+    flex: row;
 }
 
-h2 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 40px;
-}
-
-h3 {
-  font-family: 'Roboto Condensed';
-  font-weight: 400;
-  font-size: 21.5px;
-}
-
-h5 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 25px;
-}
-
-button, a {
-  font-family: 'Roboto Flex';
-  font-size: 15px;
-}
-p {
-  font-family: 'Roboto Condensed';
-  font-weight: 400;
-  font-size: 14px;
-}
 
 .hover\:underline-offset:hover {
   text-decoration: underline;
